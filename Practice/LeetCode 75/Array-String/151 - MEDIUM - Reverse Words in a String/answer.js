@@ -10,8 +10,10 @@ export var reverseWords = function (s) {
     if (s[i] != " ") {
       word += s[i];
     } else {
-      wordDict[n] = word;
-      n++;
+      if (word !== "") {
+        wordDict[n] = word;
+        n++;
+      }
       word = "";
     }
 
@@ -24,16 +26,18 @@ export var reverseWords = function (s) {
   return constructStringInReverse(wordDict, n);
 };
 
+// n is the biggest number in the dictionary
 function constructStringInReverse(strDict, n) {
   let newString = "";
-  console.log(strDict);
-  // create a string of n words using the string dictionary given
-  for (var i = 0; i < n + 1; i++) {
-    newString += strDict[n-i];
-    if (i !== n) {
-      newString += " ";
+  for (var i = 0; i <= n; i++) {
+    // if the element is not an empty string
+    if (strDict[n - i] !== "") {
+      newString += strDict[n - i];
+      // add a space if the next element is not an empty string
+      if (i !== n) {
+        newString += " ";
+      }
     }
   }
-  console.log(newString.length);
   return newString;
 }
