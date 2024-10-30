@@ -1,0 +1,1 @@
+There is a unique way of looking at this problem, the moral of the story is you can't just look at it one way. You have to look at it forwards, backwards, and sideways to come up with an effective solution.
