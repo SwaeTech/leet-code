@@ -1,5 +1,5 @@
 import { reverseWords } from "./answer.js";
-import { compareString } from "../../../TestBed/test-utilities.js";
+import { compareString } from "../../TestBed/test-utilities.js";
 
 let answer1 = reverseWords(" hello world ");
 console.log(compareString("world hello", answer1));

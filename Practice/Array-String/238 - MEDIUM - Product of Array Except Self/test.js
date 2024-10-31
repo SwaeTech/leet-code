@@ -1,5 +1,5 @@
 import { productExceptSelf, productExceptSelf_ON } from "./answer.js";
-import { compareArray } from "../../../TestBed/test-utilities.js";
+import { compareArray } from "../../TestBed/test-utilities.js";
 
 const answer1 = productExceptSelf([1, 2, 3, 4]);
 console.log(compareArray([24,12,8,6], answer1));
