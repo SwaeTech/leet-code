@@ -1,5 +1,5 @@
 import { kidsWithCandies } from "./answer.js";
-import { compareArray, compareString } from "../../../TestBed/test-utilities.js";
+import { compareArray } from "../../../TestBed/test-utilities.js";
 
 const answer1 = kidsWithCandies([2,3,5,1,3], 3);
 console.log(compareArray(answer1, [true,true,true,false,true]));

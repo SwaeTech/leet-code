@@ -1,0 +1,1 @@
+Okay, so this is a two pointer problem, traversing from both ends won't gie us the solution
