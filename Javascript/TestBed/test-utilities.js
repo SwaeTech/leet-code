@@ -20,3 +20,36 @@ export function compareArray(arr1, arr2){
 export function compareBoolean(bool1, bool2){
     return bool1==bool2;
 }
+
+class node {
+    constructor(val = null){
+        this.val = val;
+        this.next = null;
+    }
+}
+
+// create linked list from array of values and return the head
+export function createLinkedList(arr){
+    let dummy = new node();
+    let head = new node(arr[0]);
+    dummy.next = head;
+    for (let i = 1; i < arr.length; i++){
+        let nextNode = new node(arr[i]);
+        head.next = nextNode;
+        head = head.next;
+    }
+    return dummy.next;
+}
+
+export function validateLinkedList(head, arr){
+    let i = 0;
+    while (head){
+        if (arr[i] !== head.val){
+            return false;
+        }
+        head = head.next;
+        i++;
+    }
+    return true;
+}
+
